@@ -6,6 +6,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
+// Changed the app.cs to load main menu first
 namespace Calculator
 {
 	sealed partial class App : Application
@@ -26,11 +27,11 @@ namespace Calculator
 
 				Window.Current.Content = rootFrame;
 			}
-
+// changed 
 			if (e.PrelaunchActivated == false)
 			{
 				if (rootFrame.Content == null)
-					rootFrame.Navigate(typeof(MainPage), e.Arguments);
+					rootFrame.Navigate(typeof(MainMenu), e.Arguments);
 
 				Window.Current.Activate();
 			}
