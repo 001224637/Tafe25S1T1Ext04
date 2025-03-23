@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="MortgageCalculator.MortgageCalculatorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MortgageCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Grid>
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Margin="10">
+
+			<!-- The Title -->
+			<TextBlock Text="Mortgage Calculator" FontSize="40" FontWeight="Bold" TextAlignment="Center" Margin="40"/>
+
+			<!-- Principal Borrow -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+				<TextBlock Text="Principal borrow $:" FontSize="18" Margin="10"/>
+			    <TextBox x:Name="PrincipalAmountTextBox" Width="250" Text="1000000" Margin="10"/>
+				
+			</StackPanel>
+			
+			<!-- The Loan Duration -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+				<TextBlock Text="Years:" FontSize="18" Margin="10"/>
+				<TextBox x:Name="YearsTextBox" Width="250" Text="30" Margin="10"/>
+
+
+			</StackPanel>
+			
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+				<TextBlock Text="and Months:" FontSize="18" Margin="10"/>
+				<TextBox x:Name="MonthsTextBox" Width="250" Text="0" Margin="10"/>
+
+			</StackPanel>
+
+			<!-- the Interest Rate -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+				<TextBlock Text="Yearly Interest Rate:" FontSize="18" Margin="10"/>
+				<TextBox x:Name="InterestRateTextBox" Width="250" Text="3.5" Margin="10"/>
+
+			</StackPanel>
+
+			<!--  the Calculated Values -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+				<TextBlock Text="Monthly Interest Rate:" FontSize="18" Margin="10"/>
+				<TextBox x:Name="MonthlyInterestRateTextBox" Width="250" IsReadOnly="True" Margin="10"/>
+
+			</StackPanel>
+
+
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+				<TextBlock Text="Monthly Repayment $:" FontSize="18" Margin="10"/>
+				<TextBox x:Name="MonthlyRepaymentTextBox" Width="250" IsReadOnly="True" Margin="10"/>
+
+			</StackPanel>
+
+
+			<!-- Buttons -->
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10">
+				<Button x:Name="CalculateButton" Content="Calculate" Click="CalculateButton_Click" 
+                        Width="150" Height="50" Background="Gray" Foreground="Black" FontSize="30" Margin="10,10,10,20"/>
+				<Button x:Name="ExitButton" Content="Exit" Click="ExitButton_Click"
+                        Width="100" Height="50" Background="DarkGray" Foreground="Black" FontSize="30" Margin="10,10,10,20" HorizontalAlignment="Center"/>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Page>
+
