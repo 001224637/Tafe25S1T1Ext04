@@ -37,7 +37,13 @@ namespace Calculator
         {
             // Initialization logic here (if needed)
         }
-
+		
+		// Here we added a message that Trip calculator C# code will be developed later!
+		
+		private void TripCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			// Trip calculator C# code will be developed later
+		}
     }
 }
 
