@@ -8,12 +8,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-		<StackPanel HorizontalAlignment="Center" Width="700">
+	<Grid>
+		<StackPanel HorizontalAlignment="Center" Width="1000" Height="600" Margin="10,10,10,10">
 			<!-- Title -->
 			<TextBlock Text="Currency Conversion Calculator" 
-                       FontSize="32" FontWeight="Bold" TextAlignment="Center" 
-                       HorizontalAlignment="Center" Margin="0,10,0,20" />
+                       FontSize="42" FontWeight="Bold" TextAlignment="Center" 
+                       HorizontalAlignment="Center" Margin="10,0,0,0" />
 
 			<!-- Row for Amount, From, and To -->
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
@@ -23,7 +23,7 @@
 					<TextBox x:Name="AmountTextBox" Width="120" />
 				</StackPanel>
 
-				<!-- From Currency Selection -->
+				<!-- From  Currency Selection -->
 				<StackPanel Margin="10">
 					<TextBlock Text="From" FontSize="18" VerticalAlignment="Center" />
 					<ComboBox x:Name="FromCurrencyComboBox" Width="180">
@@ -53,8 +53,8 @@
 			<!-- Buttons for Conversion and Exit -->
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
 				<Button x:Name="ConvertButton" Content="Currency Conversion" Click="ConvertButton_Click" 
-                        Width="220" Height="50" Background="Gray" Margin="10"/>
-				<Button x:Name="ExitButton" Content="Exit" Click="ExitButton_Click"
+                        Width="220" Height="50" FontSize="21" Background="Gray" Margin="10"/>
+				<Button x:Name="ExitButton" Content="Exit" FontSize="21" Click="ExitButton_Click"
                         Width="100" Height="50" Background="DarkGray" Margin="10"/>
 			</StackPanel>
 		</StackPanel>

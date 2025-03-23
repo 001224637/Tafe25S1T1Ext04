@@ -22,6 +22,7 @@ namespace Calculator
     /// </summary>
     public sealed partial class CurrencyConverterPage : Page
     {
+
 		private Dictionary<string, Dictionary<string, double>> exchangeRates;
 		public CurrencyConverterPage()
         {
@@ -38,7 +39,7 @@ namespace Calculator
 				{ "INR", new Dictionary<string, double> { { "USD", 0.011492628 }, { "EUR", 0.013492774 }, { "GBP", 0.0098339397 } } }
 			};
 		}
-
+		// THIS convert button logic
 		private void ConvertButton_Click(object sender, RoutedEventArgs e)
 		{
 			if (!double.TryParse(AmountTextBox.Text, out double amount) || amount <= 0)
@@ -69,7 +70,7 @@ namespace Calculator
 				ConversionResultText.Text = "Conversion rate not available.";
 			}
 		}
-
+		// THIS calculate conversion logic
 		private double CalculateConversion(double amount, string fromCurrency, string toCurrency)
 		{
 			if (exchangeRates.ContainsKey(fromCurrency) && exchangeRates[fromCurrency].ContainsKey(toCurrency))
@@ -88,7 +89,8 @@ namespace Calculator
 
 		private void ExitButton_Click(object sender, RoutedEventArgs e)
 		{
-			Application.Current.Exit();
+			Frame.Navigate(typeof(Calculator.MainMenu));
 		}
+
 	}
 }
