@@ -32,6 +32,7 @@
 				<Button Content="Mortgage Calculator" Width="500" Height="60" FontSize="30" Margin="10"  Click="MortgageCalculator_Click"/>
 				<Button Content="Currency Calculator" Width="500" Margin="10" Height="60" FontSize="30" Click="CurrencyConverter_Click"/>
 				<Button Content="Exit" Width="500" Height="60" Margin="10" FontSize="30" Click="ExitButton_Click"/>
+				<Button Content="Trip Calculator" Width="500" Margin="10" Height="60" FontSize="30" Click="TripCalculator_Click"/>
 			</StackPanel>
 
 
